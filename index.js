@@ -1,5 +1,3 @@
-//https://apis.scrimba.com/bored/api/activity
-
 const ideaEl = document.getElementById("idea");
 const generateBtn = document.getElementById("generate-btn");
 const ideaType = document.getElementById("idea-type");
@@ -12,6 +10,7 @@ const generateRandomBackground = () => {
   return color;
 };
 
+// initially style the background when page is loaded
 document.body.style.backgroundColor = generateRandomBackground();
 
 const fetchRender = () => {
@@ -26,7 +25,7 @@ const fetchRender = () => {
       document.querySelector(".divider").classList.add("divider-style");
     });
 };
-
+// for space bar
 window.addEventListener("keydown", (e) => {
   if (e.key === 49) fetchRender();
 });
